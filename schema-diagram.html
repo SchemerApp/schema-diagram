@@ -34,6 +34,12 @@
       static get properties() {
         return {
 
+          // Schema JSON
+          schema: {
+            type: Array,
+            observer: "drawDiagram"
+          },
+
           // Collection of tiles in the grid
           tiles: {
             type: Array,

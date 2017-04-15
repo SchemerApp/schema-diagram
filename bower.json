@@ -6,5 +6,9 @@
     "polymer": "Polymer/polymer#^2.0.0-rc.3",
     "the-grid": "bkjohnson/the-grid#c5854ea87b4589b993d0d11e612ce1ff6d07eb1d",
     "paper-card": "PolymerElements/paper-card#2.0-preview"
+  },
+  "devDependencies": {
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#2.0-preview",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0-rc.5"
   }
 }
