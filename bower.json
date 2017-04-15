@@ -1,0 +1,10 @@
+{
+  "name": "schema-diagram",
+  "description": "Core visual component for https://github.com/SchemerApp/schemer-desktop",
+  "main": "schema-diagram.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0-rc.3",
+    "the-grid": "bkjohnson/the-grid#c5854ea87b4589b993d0d11e612ce1ff6d07eb1d",
+    "paper-card": "PolymerElements/paper-card#2.0-preview"
+  }
+}
