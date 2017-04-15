@@ -10,7 +10,7 @@
       }
     </style>
 
-    <svg id="lineLayer" width="1240" height="1240" viewBox="0 0 1240 1240">
+    <svg id="lineLayer">
     </svg>
 
   </template>
@@ -25,9 +25,30 @@
           // Number of pixels to offset when drawing the relationship lines.
           leftOffset: {
             type: Number,
-          }
+          },
+
+          // width of the `line-layer`
+          width: {
+            type: Number,
+            value: 1000,
+            observer: "bindSvgLayer"
+          },
+
+          // height of the `line-layer`
+          height: {
+            type: Number,
+            value: 1000,
+            observer: "bindSvgLayer"
+          },
         }
       }
+
+      bindSvgLayer() {
+        this.$.lineLayer.setAttribute("width", this.width)
+        this.$.lineLayer.setAttribute("height", this.height)
+        this.$.lineLayer.setAttribute("viewBox", "0 0 " + this.width + " " + this.height)
+      }
+
       drawRelations(tile){
         let relations = tile.relations
         let rect = tile.getBoundingClientRect()

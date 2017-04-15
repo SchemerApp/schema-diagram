@@ -25,8 +25,7 @@ Core visual component for https://github.com/SchemerApp/schemer-desktop
       cell-height="{{gridSize.cellSize}}"
       cell-width="{{gridSize.cellSize}}"
       col-count="{{gridSize.columns}}"
-      row-count="{{gridSize.rows}}"
-      cell-margin="10">
+      row-count="{{gridSize.rows}}">
       <div placeholder></div>
     </the-grid>
 
@@ -57,7 +56,7 @@ Core visual component for https://github.com/SchemerApp/schemer-desktop
             type: Object,
             value: function() {
               return {
-                cellSize: 15,
+                cellSize: 25,
                 columns: 50,
                 rows: 50
               }
@@ -69,6 +68,14 @@ Core visual component for https://github.com/SchemerApp/schemer-desktop
             type: Number,
           }
         }
+      }
+
+      ready(){
+        super.ready()
+
+        // Bind the SVG width/height to `<the-grid>`'s width/height
+        this.$.lineLayer.width = this.gridSize.cellSize * this.gridSize.columns
+        this.$.lineLayer.height = this.gridSize.cellSize * this.gridSize.rows
       }
 
       drawDiagram(schema){
