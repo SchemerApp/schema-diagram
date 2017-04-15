@@ -21,7 +21,8 @@
       <demo-snippet>
         <template>
           <schema-diagram
-            schema='[{ "name": "Table 1", "columns": [{"name": "id", "type": "integer"}], "relations": []}]'>
+            schema='[{ "name": "Table_1", "columns": [{"name": "id", "type": "integer"}, {"name": "val", "type": "string"}], "relations": ["config_table.id"]},
+            { "name": "config_table", "columns": [{"name": "id", "type": "integer"}, { "name": "value", "type": "string"}], "relations": []}]'>
           </schema-diagram>
         </template>
       </demo-snippet>
