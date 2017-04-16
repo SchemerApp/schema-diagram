@@ -1,4 +1,6 @@
 # schema-diagram
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/SchemerApp/schema-diagram)
+
 Core visual component for https://github.com/SchemerApp/schemer-desktop
 
 This component can also be the basis for an interactive visual database documentation, provided you correctly use the `schema` variable
