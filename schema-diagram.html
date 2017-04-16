@@ -127,6 +127,13 @@ Core visual component for https://github.com/SchemerApp/schemer-desktop
       handleTrack(e){
         let tile = e.target
 
+        let vertOffset = this.$.grid.getBoundingClientRect().top
+        if (window.scrollY > 0){
+          this.$.lineLayer.vertOffset = vertOffset - window.scrollY
+        }
+        else {
+          this.$.lineLayer.vertOffset = vertOffset
+        }
         this.$.lineLayer._moveRelationships(tile)
       }
     }

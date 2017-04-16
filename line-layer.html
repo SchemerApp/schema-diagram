@@ -27,6 +27,9 @@
             type: Number,
           },
 
+          // Number of pixels to offset vertically when drawing the relationship lines.
+          vertOffset: Number,
+
           // width of the `line-layer`
           width: {
             type: Number,
@@ -84,8 +87,8 @@
         let startTilePosition = {
           left: startBounds.left - this.leftOffset + window.scrollX,
           right: startBounds.right - this.leftOffset + window.scrollX,
-          top: startBounds.top + window.scrollY,
-          bottom: startBounds.bottom + window.scrollY,
+          top: startBounds.top + this.vertOffset,
+          bottom: startBounds.bottom - this.vertOffset,
         }
 
         // End Info
@@ -93,9 +96,8 @@
         let endTilePosition = {
           left: endBounds.left - this.leftOffset + window.scrollX,
           right: endBounds.right - this.leftOffset + window.scrollX,
-          top: endBounds.top + window.scrollY,
-          bottom: endBounds.bottom + window.scrollY
-
+          top: endBounds.top + this.vertOffset,
+          bottom: endBounds.bottom - this.vertOffset
         }
 
         let lineStart = {}
